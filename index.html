@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>Counter App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .counter-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .counter {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        button {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-5">Counter App</h1>
+        <div class="counter-container">
+            <p class="counter">0</p>
+            <button class="btn btn-primary" onclick="incrementCounter()">Increment</button>
+            <button class="btn btn-danger" onclick="decrementCounter()">Decrement</button>
+            <button class="btn btn-warning" onclick="resetCounter()">Reset</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <div class="copyright">
+            <center>
+                <p>&copy; 2024 Made by Basem Halaika. All rights reserved.</p>
+                <a href="https://dukingdraon.com/4/7251046" style="width: 50px; color: #FFCC00;">click here</a>
+            </center>
+          
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+    <script>
+        let count = 0;
+        const counterElement = document.querySelector('.counter');
+
+        function incrementCounter() {
+            count++;
+            updateCounter();
+        }
+
+        function decrementCounter() {
+            count--;
+            updateCounter();
+        }
+
+        function resetCounter() {
+            count = 0;
+            updateCounter();
+        }
+
+        function updateCounter() {
+            counterElement.innerText = count;
+        }
+    </script>
+</body>
+</html>
